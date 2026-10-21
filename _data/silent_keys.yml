@@ -2,13 +2,11 @@
 # photo: file name in /assets/images/silent-keys/ (leave out if there is no photo).
 # year: leave out if not confirmed.
 #
-# CHECK BEFORE GOING LIVE: the old site showed 2026 for several entries
-# marked "# check year". That may be a database default rather than the real
-# year. Confirm with members and correct or remove the year.
+# Years shown as 2026 on the old site were a database default, not real dates,
+# so they were removed. Add the real year back to an entry if a member confirms it.
 
 - name: Mick Jefferson
   call: G8WYB
-  year: 2026 # check year
   tribute: >-
     A long-standing member who died aged 92. No single person knew more about
     Scarborough than Mick. He was a long-running reporter for the Scarborough
@@ -18,7 +16,6 @@
 
 - name: Frederick (Fred) Hall
   call: M3CTW
-  year: 2026 # check year
   photo: M3CTW.jpg
   tribute: >-
     G7PKG said of Fred: "When I drove Fred back, after being at the club, to the
@@ -28,7 +25,6 @@
 
 - name: Ron Young
   call: G4GWC
-  year: 2026 # check year
   photo: G4GWC.jpg
   tribute: >-
     A keen member of SARS who put a lot of effort into his antennas and into
@@ -36,23 +32,19 @@
 
 - name: Ray Nellis
   call: 2E1BZA
-  year: 2026 # check year
   tribute: Ray sadly passed away aged 80.
 
 - name: Peter Robson
   call: G3FYP
-  year: 2026 # check year
   tribute: >-
     Peter was a constructor and did a lot of portable and mobile operating
     because of the limitations of his home QTH. He took part in many VHF contests.
 
 - name: Allan Stromstedt
   call: M0GZX / SM5ELF
-  year: 2026 # check year
 
 - name: Peter Tipper
   call: G3JBR
-  year: 2026 # check year
 
 - name: Bob (Robert) Alders
   call: M0GAP
