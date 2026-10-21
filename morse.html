@@ -1,8 +1,5 @@
 ---
 layout: default
-# Hidden until the audio files are added. To restore: delete the next line,
-# and add Morse practice back to _data/nav.yml (see README).
-published: false
 title: Morse practice
 permalink: /morse/
 description: Free Morse code practice from Scarborough Amateur Radio Society. 37 audio exercises in three levels, by Robert G0WHO and Ron G4GWC.
@@ -10,7 +7,16 @@ description: Free Morse code practice from Scarborough Amateur Radio Society. 37
 <div class="prose">
   <h1>Morse practice</h1>
   <p class="lead">A free course in three levels, introducing one or two characters at a time. It was created for the club by Robert G0WHO and Ron G4GWC.</p>
+  {%- comment -%}
+  Audio players only appear for MP3s that exist in assets/audio/morse/,
+  so the page works before all the audio has been uploaded.
+  {%- endcomment -%}
+  {%- assign morse_audio = site.static_files | where_exp: "f", "f.path contains '/assets/audio/morse/'" %}
+  {%- if morse_audio.size > 0 %}
   <p>Play each exercise and write down what you hear, then open the text to check your copy. Set your volume low to start with.</p>
+  {%- else %}
+  <p>The audio for these exercises is being restored. In the meantime, you can use the practice texts with a Morse app or a practice oscillator, and learn the alphabet at the bottom of the page.</p>
+  {%- endif %}
 </div>
 
 <ul class="level-nav">
@@ -27,7 +33,11 @@ description: Free Morse code practice from Scarborough Amateur Radio Society. 37
   <div class="exercise">
     <span class="ex-n">{{ ex.n }}</span>
     <span class="ex-new">{{ ex.new }}</span>
-    <audio controls preload="none" src="{{ '/assets/audio/morse/' | append: ex.audio | relative_url }}" aria-label="Exercise {{ ex.n }} audio"></audio>
+    {%- assign audio_path = '/assets/audio/morse/' | append: ex.audio %}
+    {%- assign audio_file = morse_audio | where: "path", audio_path | first %}
+    {%- if audio_file %}
+    <audio controls preload="none" src="{{ audio_path | relative_url }}" aria-label="Exercise {{ ex.n }} audio"></audio>
+    {%- endif %}
     <details>
       <summary>Show the text for exercise {{ ex.n }}</summary>
       <p class="practice-text">{{ ex.text }}</p>
