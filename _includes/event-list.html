@@ -1,5 +1,5 @@
 {%- comment -%} Pass max=N to show only the first N upcoming events. {%- endcomment -%}
-{%- assign events = site.data.events | sort: "date" -%}
+{%- if site.data.events -%}{%- assign events = site.data.events | sort: "date" -%}{%- else -%}{%- assign events = "" | split: "," -%}{%- endif -%}
 <div class="events" data-limit="{{ include.max | default: 0 }}">
   {%- if events and events.size > 0 %}
   <ol class="event-list">
