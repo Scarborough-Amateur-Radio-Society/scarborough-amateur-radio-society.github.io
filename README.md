@@ -15,6 +15,8 @@ directly on github.com. GitHub rebuilds the site within a minute or two.
 | Useful links           | `_data/links.yml`          |
 | Menu                   | `_data/nav.yml`            |
 | Morse exercises        | `_data/morse.yml`          |
+| Gallery photos         | `assets/images/gallery/`   |
+| Gallery captions       | `_data/gallery.yml`        |
 | Home page text         | `index.html`               |
 | Repeater details       | `repeater.html`            |
 | Colours and fonts      | `assets/css/site.css`      |
@@ -28,6 +30,14 @@ the person who made it and the old version of the site stays up.
 
 Events: dates must be written `"YYYY-MM-DD"` with quotes. Past events
 hide themselves automatically, so you don't need to delete them straight away.
+
+Gallery: upload photos into `assets/images/gallery/` and they appear on
+the Gallery page automatically. Name them `YYYY-MM-DD-short-description.jpg`
+(lower case, hyphens, no spaces): the date shows under the photo, the rest
+becomes the caption, and newest come first. Resize photos to about 1600 pixels
+wide first, so the page loads quickly on phones. To delete a photo, open it on
+GitHub and click the bin icon. Only post photos of people who are happy to be
+online, and never of children without a parent's agreement.
 
 Fonts: the site uses each device's built-in fonts (no Google Fonts), so
 nothing is loaded from third-party servers. Change them in the `--display`
@@ -46,8 +56,9 @@ and `--body` lines at the top of `assets/css/site.css`.
      that folder, so the audio can be added a few files at a time.
    - Silent Key photos (`M0GAP.jpg`, `M3CTW.jpg`, `PA1AXE.jpg`, `G4GWC.jpg`)
      into `assets/images/silent-keys/`.
-   - The whole `Gallery/` folder, as is, into the root of this repository.
-     The menu links to `/Gallery/web/Index.html` (capitals matter on GitHub Pages).
+   - Any photos worth keeping from the old `Gallery/` into `assets/images/gallery/`,
+     renamed as described under "Gallery" above. Old links to the old gallery
+     are redirected to the new Gallery page.
    - Any links from the old `useful_links.php` page into `_data/links.yml`.
 
    The `old-site/` folder is excluded from the build; don't commit it.

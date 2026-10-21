@@ -1,0 +1,5 @@
+# Optional captions for the Gallery. Without an entry here, a photo's caption
+# is made from its file name. Put the exact file name, a colon, then the caption.
+# Use quotes if the caption contains a colon.
+#
+# 2026-08-15-scarborough-castle.jpg: "GB4SC on air from Scarborough Castle"

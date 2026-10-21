@@ -1,0 +1,45 @@
+---
+layout: default
+title: Gallery
+permalink: /gallery/
+description: Photos from Scarborough Amateur Radio Society events, field days and club nights.
+---
+{%- comment -%}
+Every image in assets/images/gallery/ appears here automatically.
+Name files like 2026-08-15-scarborough-castle.jpg: the date is shown under
+the photo, the rest becomes the caption, and newest photos come first.
+Optional: add a nicer caption in _data/gallery.yml (see README).
+{%- endcomment -%}
+<div class="prose">
+  <h1>Gallery</h1>
+  <p class="lead">Photos from club nights, field days and special event stations.</p>
+</div>
+
+{%- assign photos = site.static_files | where_exp: "f", "f.path contains '/assets/images/gallery/'" | sort: "path" | reverse %}
+{%- assign shown = 0 %}
+<ul class="gallery">
+  {%- for f in photos %}
+  {%- assign ext = f.extname | downcase %}
+  {%- unless ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".webp" or ext == ".gif" %}{% continue %}{% endunless %}
+  {%- assign shown = shown | plus: 1 %}
+  {%- assign stem = f.basename %}
+  {%- assign photo_date = "" %}
+  {%- assign y = stem | slice: 0, 4 | plus: 0 %}
+  {%- if y > 1900 and y < 2100 and stem.size > 10 %}
+    {%- assign photo_date = stem | slice: 0, 10 %}
+    {%- assign stem = stem | slice: 11, 200 %}
+  {%- endif %}
+  {%- assign caption = "" %}
+  {%- if site.data.gallery %}{% assign caption = site.data.gallery[f.name] | default: "" %}{% endif %}
+  {%- if caption == "" %}{% assign caption = stem | replace: "-", " " | replace: "_", " " | capitalize %}{% endif %}
+  <li>
+    <a href="{{ f.path | relative_url }}">
+      <img src="{{ f.path | relative_url }}" alt="{{ caption | escape }}" loading="lazy">
+    </a>
+    <p>{{ caption }}{% if photo_date != "" %}<span>{{ photo_date | date: "%-d %B %Y" }}</span>{% endif %}</p>
+  </li>
+  {%- endfor %}
+</ul>
+{%- if shown == 0 %}
+<p>No photos yet. Check back soon, or see the club's <a href="{{ site.facebook }}">Facebook group</a>.</p>
+{%- endif %}
