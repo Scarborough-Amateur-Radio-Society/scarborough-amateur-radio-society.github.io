@@ -42,6 +42,10 @@ and `--body` lines at the top of `assets/css/site.css`.
    Then copy into this repository:
    - Morse audio (`day1.mp3` to `day37.mp3`, and `day35a.mp3`) into `assets/audio/morse/`.
      The old site used both `Content/` and `CONTENT/` folders, so check both.
+     The Morse page is currently hidden (`published: false` in `morse.html`).
+     Once the audio is in, delete that line, add the menu entry back to
+     `_data/nav.yml` (`- title: Morse practice` / `  url: /morse/`), and add the
+     three old-site Morse redirects back to `404.html` if wanted.
    - Silent Key photos (`M0GAP.jpg`, `M3CTW.jpg`, `PA1AXE.jpg`, `G4GWC.jpg`)
      into `assets/images/silent-keys/`.
    - The whole `Gallery/` folder, as is, into the root of this repository.
