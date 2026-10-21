@@ -1,9 +1,35 @@
 # Club events. Past events are hidden automatically in visitors' browsers.
-# Copy the example below, remove the # marks, and fill it in.
-# Dates must be written "YYYY-MM-DD" with the quotes.
-#
-# - date: "2026-10-12"
-#   title: Construction evening
-#   time: 7:30pm
-#   place: Westover Club
-#   details: Bring a project you're working on, or come and watch.
+# Copy an entry below and fill it in. Dates must be written "YYYY-MM-DD"
+# with the quotes. Leave out any line you don't need (time, place, details).
+
+- date: "2026-10-26"
+  title: Club night
+  time: 7:30pm
+  place: Westover Club
+
+- date: "2026-11-02"
+  title: "Talk: Club Log, by Phil G4OBK"
+  time: 7:30pm
+  place: Westover Club
+  details: Note this is just one week after the last club night due to room availability changes at the Westover Club.
+
+- date: "2026-11-16"
+  title: Club night
+  time: 7:30pm
+  place: Westover Club
+
+- date: "2026-11-30"
+  title: Club night
+  time: 7:30pm
+  place: Westover Club
+
+- date: "2026-12-09"
+  title: Hornsea Amateur Radio Christmas Party
+  place: Hornsea
+  details: Hosted by our friends at Hornsea, on a Wednesday.
+
+- date: "2026-12-14"
+  title: SARS Christmas party
+  time: 7:30pm
+  place: Westover Club
+  details: Our last meeting of 2026.
