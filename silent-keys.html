@@ -13,10 +13,13 @@ description: Remembering members of the Scarborough Amateur Radio Society who ha
 <ul class="sk-list">
   {%- for sk in site.data.silent_keys %}
   <li class="sk">
+    {%- comment -%} A Morse key image stands in for anyone without a photo, or if a photo file is missing. {%- endcomment %}
+    {%- assign key_img = '/assets/images/silent-key.jpg' | relative_url %}
     <span class="sk-pic">
-      <span class="sk-mark" aria-hidden="true" title="SK"><i class="di"></i><i class="di"></i><i class="di"></i><i class="da"></i><i class="di"></i><i class="da"></i></span>
       {%- if sk.photo %}
-      <img class="sk-photo" src="{{ '/assets/images/silent-keys/' | append: sk.photo | relative_url }}" alt="{{ sk.name }}" loading="lazy" width="72" height="72" onerror="this.remove()">
+      <img class="sk-photo" src="{{ '/assets/images/silent-keys/' | append: sk.photo | relative_url }}" alt="{{ sk.name }}" loading="lazy" width="72" height="72" onerror="this.onerror=null;this.alt='';this.src='{{ key_img }}'">
+      {%- else %}
+      <img class="sk-photo" src="{{ key_img }}" alt="" loading="lazy" width="72" height="72">
       {%- endif %}
     </span>
     <div>
