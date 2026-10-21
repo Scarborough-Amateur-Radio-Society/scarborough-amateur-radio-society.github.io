@@ -1,0 +1,134 @@
+# Silent Keys, carried over from the old site.
+# photo: file name in /assets/images/silent-keys/ (leave out if there is no photo).
+# year: leave out if not confirmed.
+#
+# CHECK BEFORE GOING LIVE: the old site showed 2026 for several entries
+# marked "# check year". That may be a database default rather than the real
+# year. Confirm with members and correct or remove the year.
+
+- name: Mick Jefferson
+  call: G8WYB
+  year: 2026 # check year
+  tribute: >-
+    A long-standing member who died aged 92. No single person knew more about
+    Scarborough than Mick. He was a long-running reporter for the Scarborough
+    Evening News and later freelance, and acted as the society's press
+    representative, officially or not, making sure SARS got publicised. He had a
+    boat too, and was never seen in a car, always on a small motorbike or moped.
+
+- name: Frederick (Fred) Hall
+  call: M3CTW
+  year: 2026 # check year
+  photo: M3CTW.jpg
+  tribute: >-
+    G7PKG said of Fred: "When I drove Fred back, after being at the club, to the
+    caravan where he was staying, he was telling me all about his work as a watch
+    and clock repairer. It was a fascinating journey as Fred told me about how
+    fine and small some of the parts were. He will be sadly missed."
+
+- name: Ron Young
+  call: G4GWC
+  year: 2026 # check year
+  photo: G4GWC.jpg
+  tribute: >-
+    A keen member of SARS who put a lot of effort into his antennas and into
+    training others. Ron co-wrote the club's Morse practice course.
+
+- name: Ray Nellis
+  call: 2E1BZA
+  year: 2026 # check year
+  tribute: Ray sadly passed away aged 80.
+
+- name: Peter Robson
+  call: G3FYP
+  year: 2026 # check year
+  tribute: >-
+    Peter was a constructor and did a lot of portable and mobile operating
+    because of the limitations of his home QTH. He took part in many VHF contests.
+
+- name: Allan Stromstedt
+  call: M0GZX / SM5ELF
+  year: 2026 # check year
+
+- name: Peter Tipper
+  call: G3JBR
+  year: 2026 # check year
+
+- name: Bob (Robert) Alders
+  call: M0GAP
+  year: 2023
+  photo: M0GAP.jpg
+  tribute: >-
+    Bob Alders, or Robert as I had always called him, was a lovely man and was
+    one of the amateur radio trainers at the club. I believe he was one of the
+    adjudicators too when we used to hold our exams at the Crossgates Community
+    Centre. Sad loss, may he rest in peace. Our thoughts are with his family.
+
+- name: Ger Akse
+  call: PA1AXE
+  year: 2020
+  photo: PA1AXE.jpg
+  tribute: >-
+    Phil G4OBK said: "Ger Akse as I knew him through his partner Christine
+    initially, who worked with my wife Judy in Pickering in the noughties. I
+    introduced Ger to SARS in the period when I wasn't a member and he soon
+    became Chairman. Ger worked tirelessly for the society and
+    hosted CW National Field Day in his garden on more than one occasion. I
+    operated in that contest for SARS one year from Ger's garden."
+
+- name: Tony Blythe
+  call: G3LOJ
+  year: 2015
+  tribute: >-
+    Tony died on 6 January 2015, aged 84. He held DXCC on 80 metres, was ex-RAF,
+    and was a real CW enthusiast. He lived in Kirkbymoorside.
+
+- name: Ernest (Ernie) Stankiste BEM
+  call: G4FCH
+  year: 2014
+  tribute: >-
+    Ernie was an ex-Royal Navy CW wireless operator who served in many parts of
+    the world during the Second World War, and later worked at GCHQ. A long-standing
+    member, he operated regularly on Field Day events and was secretary for many
+    years. He died peacefully on 30 November 2014, aged 93.
+
+- name: Jim Yarker
+  call: G3GJY
+  year: 2011
+  tribute: >-
+    Phil G4OBK said: "Jim Yarker worked at RAF Fylingdales. Other old timers will
+    know him better than me. When we lived where we do now from 1996-2000 I
+    visited Jim Yarker a few times. Jim was active in CW and on
+    phone. His 3-element trapped Yagi on a wind-up mast was prominent and was
+    noticed by hams from all over, driving by on their way to Whitby on the main A169."
+
+- name: Geoff Pritchard
+  call: G4ZGP
+  year: 2010
+  tribute: >-
+    Made an Honorary Member of SARS before leaving for Stockport. Geoff was the
+    UK Deputy Chief Morse Examiner, serving under Roy G4SSH for ten years until the
+    Morse test ended. He prided himself on sending perfect Morse with a straight
+    key, and was a true gentleman.
+
+- name: Henry Wiggins
+  call: G2CP
+  year: 1998
+  tribute: SARS took on his callsign, G2CP, for use in QRP contests.
+
+- name: Robert (Bob) Wilkinson
+  tribute: >-
+    The repeater's callsign, GB7RW, carries his initials: the RW stands for
+    Robert Wilkinson.
+
+- name: Andy Gauld
+  call: G0KFG
+  tribute: >-
+    Andy lived in Newby, Scarborough. A Scot, he flew in Lancasters using their
+    R1155 receiver. A lovely chap.
+
+- name: Ken Clayton
+- name: Colin Sedgwick
+- name: Ray Storey
+- name: John Hall
+- name: Dennis Allen

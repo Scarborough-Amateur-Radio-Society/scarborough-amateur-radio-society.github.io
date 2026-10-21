@@ -1,0 +1,13 @@
+title: Scarborough Amateur Radio Society
+short_title: SARS
+callsign: G4BP
+description: Scarborough Amateur Radio Society (G4BP) meets on alternate Monday evenings in Scarborough. Newcomers and visitors welcome.
+url: https://www.g4bp.org
+baseurl: ""
+lang: en-GB
+facebook: https://www.facebook.com/groups/g4bp.sars
+
+markdown: kramdown
+exclude:
+  - README.md
+  - old-site/

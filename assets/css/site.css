@@ -1,0 +1,246 @@
+/* Scarborough Amateur Radio Society – G4BP
+   Colours are taken from the club logo. */
+:root {
+  --navy: #173452;
+  --signal: #429cd0;
+  --signal-dark: #1f6fa3;  /* signal blue darkened for text contrast */
+  --paper: #ffffff;
+  --mist: #edf4fa;
+  --rule: #c8d9e8;
+  --text: #22303f;
+  --muted: #56677a;
+
+  /* Built-in device fonts only: nothing is downloaded from third parties. */
+  --display: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --body: Georgia, Cambria, "Times New Roman", serif;
+  --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --wrap: 68rem;
+  --measure: 38rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; height: auto; }
+[hidden] { display: none !important; }
+
+a { color: var(--signal-dark); text-underline-offset: 0.15em; }
+a:hover { color: var(--navy); }
+:focus-visible { outline: 3px solid var(--signal); outline-offset: 2px; }
+
+h1, h2, h3 {
+  font-family: var(--display);
+  color: var(--navy);
+  line-height: 1.2;
+  font-weight: 700;
+}
+h1 { font-size: clamp(1.9rem, 4vw, 2.75rem); margin: 0 0 1rem; letter-spacing: -0.01em; }
+h2 { font-size: 1.5rem; margin: 2.5rem 0 0.75rem; }
+h3 { font-size: 1.125rem; margin: 0 0 0.25rem; }
+
+p, ul, ol, dl { margin: 0 0 1rem; }
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 1.25rem; }
+.prose { max-width: var(--measure); }
+.lead { font-size: 1.3rem; line-height: 1.5; color: var(--navy); }
+.small { font-size: 0.9rem; }
+.muted { color: var(--muted); }
+
+.skip {
+  position: absolute; left: -999px; top: 0;
+  background: var(--navy); color: #fff; padding: 0.5rem 1rem; z-index: 10;
+}
+.skip:focus { left: 0; }
+
+/* ---------- Header ---------- */
+.header-inner {
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between; gap: 1rem 2rem;
+  padding-top: 1rem; padding-bottom: 1rem;
+}
+.brand {
+  display: flex; align-items: center; gap: 0.9rem;
+  text-decoration: none; color: var(--navy);
+}
+.brand img { width: 72px; height: 72px; flex: none; }
+.brand-text { display: flex; flex-direction: column; }
+.brand-name { font-family: var(--display); font-weight: 700; font-size: 1.1rem; line-height: 1.25; max-width: 16rem; }
+.brand-call { font-family: var(--display); font-weight: 700; color: var(--signal-dark); font-size: 0.95rem; letter-spacing: 0.08em; }
+
+.site-nav ul {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem;
+}
+.site-nav a {
+  font-family: var(--display); font-weight: 600; font-size: 0.95rem;
+  color: var(--navy); text-decoration: none;
+  display: inline-block; padding: 0.35rem 0;
+  border-bottom: 3px solid transparent;
+}
+.site-nav a:hover { border-bottom-color: var(--rule); }
+.site-nav a[aria-current="page"] { border-bottom-color: var(--signal); }
+
+/* The callsign in Morse: the one decorative element on the site */
+.morse-strip {
+  background: var(--navy);
+  display: flex; align-items: center; gap: 1.4rem;
+  padding: 0.7rem max(1.25rem, calc((100% - var(--wrap)) / 2 + 1.25rem));
+}
+.morse-strip .ch { display: flex; align-items: center; gap: 0.4rem; }
+.morse-strip i { display: block; height: 0.5rem; border-radius: 0.25rem; background: var(--signal); }
+.morse-strip .di { width: 0.5rem; }
+.morse-strip .da { width: 1.6rem; }
+.morse-label {
+  margin-left: auto;
+  font-family: var(--display); font-weight: 700; font-size: 0.85rem;
+  color: #fff; letter-spacing: 0.12em;
+}
+
+/* ---------- Main ---------- */
+main.wrap { padding-top: 2.75rem; padding-bottom: 4rem; min-height: 60vh; }
+
+/* Home */
+.home-top {
+  display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 2.5rem 3.5rem; align-items: start;
+}
+.facts {
+  border-left: 4px solid var(--signal);
+  padding: 0.25rem 0 0.25rem 1.5rem;
+}
+.facts dt {
+  font-family: var(--display); font-weight: 700; color: var(--navy);
+  font-size: 1rem; margin-top: 1.25rem;
+}
+.facts dt:first-child { margin-top: 0; }
+.facts dd { margin: 0.2rem 0 0; }
+.freq { font-family: var(--display); font-weight: 700; font-size: 1.35rem; color: var(--navy); font-variant-numeric: tabular-nums; }
+
+.home-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 0 3.5rem; margin-top: 1rem;
+}
+
+/* Events */
+.event-list { list-style: none; padding: 0; margin: 0; }
+.event {
+  display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem;
+  padding: 1rem 0; border-top: 1px solid var(--rule);
+}
+.event time { font-family: var(--display); color: var(--navy); line-height: 1.1; }
+.ev-day { display: block; font-size: 1.9rem; font-weight: 700; }
+.ev-month { font-size: 0.85rem; font-weight: 600; color: var(--muted); }
+.ev-meta { color: var(--muted); font-size: 1rem; margin-bottom: 0.4rem; }
+.event p:last-child { margin-bottom: 0; }
+
+/* Definition tables (repeater) */
+.spec { display: grid; grid-template-columns: max-content 1fr; gap: 0.6rem 2rem; max-width: 40rem; }
+.spec dt { font-family: var(--display); font-weight: 600; color: var(--navy); font-size: 1rem; }
+.spec dd { margin: 0; font-variant-numeric: tabular-nums; }
+
+/* Silent Keys */
+.sk-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); gap: 0 3rem; }
+.sk {
+  display: grid; grid-template-columns: 4.5rem 1fr; gap: 0 1.1rem;
+  padding: 1.25rem 0; border-top: 1px solid var(--rule);
+}
+.sk-pic { position: relative; width: 4.5rem; height: 4.5rem; }
+.sk-photo { position: absolute; inset: 0; }
+.sk-photo, .sk-mark {
+  width: 4.5rem; height: 4.5rem; border-radius: 50%; object-fit: cover;
+}
+.sk-mark {
+  background: var(--mist); color: var(--navy);
+  display: flex; align-items: center; justify-content: center; gap: 0.2rem;
+}
+.sk-mark i { display: block; height: 0.3rem; border-radius: 0.15rem; background: var(--signal); }
+.sk-mark .di { width: 0.3rem; }
+.sk-mark .da { width: 0.95rem; }
+.sk-call { font-family: var(--display); font-weight: 700; color: var(--signal-dark); font-size: 0.95rem; letter-spacing: 0.04em; }
+.sk-year { color: var(--muted); font-size: 0.95rem; }
+.sk p { font-size: 1rem; margin: 0.5rem 0 0; }
+
+/* Morse */
+.level-nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin: 1.5rem 0 0; padding: 0; list-style: none; font-family: var(--display); font-weight: 600; }
+.level { margin-top: 3rem; }
+.level > h2 { margin-top: 0; }
+.exercise {
+  display: grid; grid-template-columns: 3rem minmax(9rem, 14rem) minmax(0, 1fr);
+  gap: 0.5rem 1.25rem; align-items: center;
+  padding: 0.9rem 0; border-top: 1px solid var(--rule);
+}
+.ex-n { font-family: var(--display); font-weight: 700; color: var(--muted); font-variant-numeric: tabular-nums; }
+.ex-new { font-family: var(--display); font-weight: 700; color: var(--navy); font-size: 1.05rem; }
+.exercise audio { width: 100%; height: 2.5rem; }
+.exercise details { grid-column: 2 / -1; }
+.exercise summary { cursor: pointer; font-size: 0.95rem; color: var(--signal-dark); }
+.practice-text { font-family: var(--mono); font-size: 0.9rem; line-height: 1.7; word-spacing: 0.3em; margin: 0.5rem 0 0; overflow-wrap: anywhere; }
+
+.alphabet {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+  gap: 0.25rem 1.5rem; padding: 0; list-style: none; max-width: 52rem;
+}
+.alphabet li { display: flex; gap: 0.75rem; align-items: baseline; }
+.alphabet b { font-family: var(--display); color: var(--navy); min-width: 1.2rem; }
+.alphabet code { font-family: var(--mono); font-size: 1.05rem; letter-spacing: 0.15em; color: var(--text); }
+
+/* Links */
+.link-list { list-style: none; padding: 0; max-width: var(--measure); }
+.link-list li { padding: 0.6rem 0; border-top: 1px solid var(--rule); }
+.link-list a { font-family: var(--display); font-weight: 600; }
+.link-list span { display: block; font-size: 1rem; color: var(--muted); }
+
+/* Forms */
+.form { max-width: 34rem; display: grid; gap: 1.1rem; }
+.form label { display: grid; gap: 0.35rem; font-family: var(--display); font-weight: 600; font-size: 0.95rem; color: var(--navy); }
+.form input, .form textarea {
+  font: inherit; font-size: 1rem; color: var(--text);
+  padding: 0.6rem 0.75rem; border: 1px solid #9fb6cb; border-radius: 4px; background: #fff;
+}
+.form textarea { min-height: 9rem; resize: vertical; }
+.button {
+  justify-self: start;
+  font-family: var(--display); font-weight: 700; font-size: 1rem;
+  background: var(--navy); color: #fff; border: 0; border-radius: 4px;
+  padding: 0.75rem 1.4rem; cursor: pointer; text-decoration: none;
+}
+.button:hover { background: var(--signal-dark); color: #fff; }
+.hp { position: absolute; left: -5000px; }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--mist); border-top: 1px solid var(--rule); font-size: 1rem; }
+.footer-inner { padding-top: 1.75rem; padding-bottom: 1.75rem; }
+.footer-inner p { margin-bottom: 0.5rem; max-width: 44rem; }
+.footer-inner a { margin-right: 1.25rem; }
+
+/* ---------- Small screens ---------- */
+@media (max-width: 760px) {
+  body { font-size: 1.0625rem; }
+  .home-top { grid-template-columns: 1fr; }
+  .brand img { width: 56px; height: 56px; }
+  .brand-name { font-size: 1rem; }
+  .morse-strip { gap: 0.9rem; overflow: hidden; }
+  .morse-strip .ch { gap: 0.3rem; }
+  .morse-strip .da { width: 1.15rem; }
+  .morse-label { display: none; }
+  .exercise { grid-template-columns: 2.25rem 1fr; }
+  .exercise audio { grid-column: 1 / -1; }
+  .exercise details { grid-column: 1 / -1; }
+  .spec { grid-template-columns: 1fr; gap: 0.1rem; }
+  .spec dd { margin-bottom: 0.6rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+}

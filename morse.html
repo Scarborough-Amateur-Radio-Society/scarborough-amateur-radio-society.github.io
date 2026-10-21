@@ -1,0 +1,46 @@
+---
+layout: default
+title: Morse practice
+permalink: /morse/
+description: Free Morse code practice from Scarborough Amateur Radio Society. 37 audio exercises in three levels, by Robert G0WHO and Ron G4GWC.
+---
+<div class="prose">
+  <h1>Morse practice</h1>
+  <p class="lead">A free course in three levels, introducing one or two characters at a time. It was created for the club by Robert G0WHO and Ron G4GWC.</p>
+  <p>Play each exercise and write down what you hear, then open the text to check your copy. Set your volume low to start with.</p>
+</div>
+
+<ul class="level-nav">
+  {%- for lv in site.data.morse %}
+  <li><a href="#level-{{ lv.level }}">Level {{ lv.level }}</a></li>
+  {%- endfor %}
+  <li><a href="#alphabet">The alphabet</a></li>
+</ul>
+
+{%- for lv in site.data.morse %}
+<section class="level" id="level-{{ lv.level }}">
+  <h2>Level {{ lv.level }}: {{ lv.summary }}</h2>
+  {%- for ex in lv.exercises %}
+  <div class="exercise">
+    <span class="ex-n">{{ ex.n }}</span>
+    <span class="ex-new">{{ ex.new }}</span>
+    <audio controls preload="none" src="{{ '/assets/audio/morse/' | append: ex.audio | relative_url }}" aria-label="Exercise {{ ex.n }} audio"></audio>
+    <details>
+      <summary>Show the text for exercise {{ ex.n }}</summary>
+      <p class="practice-text">{{ ex.text }}</p>
+    </details>
+  </div>
+  {%- endfor %}
+</section>
+{%- endfor %}
+
+<section class="level" id="alphabet">
+  <h2>The alphabet</h2>
+  <ul class="alphabet">
+    {%- assign codes = "A .-|B -...|C -.-.|D -..|E .|F ..-.|G --.|H ....|I ..|J .---|K -.-|L .-..|M --|N -.|O ---|P .--.|Q --.-|R .-.|S ...|T -|U ..-|V ...-|W .--|X -..-|Y -.--|Z --..|0 -----|1 .----|2 ..---|3 ...--|4 ....-|5 .....|6 -....|7 --...|8 ---..|9 ----.|. .-.-.-|, --..--|? ..--.." | split: "|" -%}
+    {%- for c in codes %}
+    {%- assign parts = c | split: " " %}
+    <li><b>{{ parts[0] }}</b> <code>{{ parts[1] }}</code></li>
+    {%- endfor %}
+  </ul>
+</section>

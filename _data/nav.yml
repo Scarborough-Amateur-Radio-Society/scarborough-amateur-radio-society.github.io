@@ -1,0 +1,17 @@
+# Top navigation. Order here = order on the site.
+- title: Home
+  url: /
+- title: Events
+  url: /events/
+- title: Repeater
+  url: /repeater/
+- title: Morse practice
+  url: /morse/
+- title: Gallery
+  url: /Gallery/web/Index.html
+- title: Silent Keys
+  url: /silent-keys/
+- title: Links
+  url: /links/
+- title: Contact
+  url: /contact/

@@ -1,0 +1,9 @@
+# Club events. Past events are hidden automatically in visitors' browsers.
+# Copy the example below, remove the # marks, and fill it in.
+# Dates must be written "YYYY-MM-DD" with the quotes.
+#
+# - date: "2026-10-12"
+#   title: Construction evening
+#   time: 7:30pm
+#   place: Westover Club
+#   details: Bring a project you're working on, or come and watch.

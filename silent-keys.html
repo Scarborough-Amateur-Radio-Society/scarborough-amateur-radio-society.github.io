@@ -1,0 +1,33 @@
+---
+layout: default
+title: Silent Keys
+permalink: /silent-keys/
+description: Remembering members of the Scarborough Amateur Radio Society who have become Silent Keys.
+---
+<div class="prose">
+  <h1>Silent Keys</h1>
+  <p class="lead">Remembering members and friends of the society.</p>
+  <p>If you can add a memory, a photo or a missing callsign, please <a href="{{ '/contact/' | relative_url }}">get in touch</a>.</p>
+</div>
+
+<ul class="sk-list">
+  {%- for sk in site.data.silent_keys %}
+  <li class="sk">
+    <span class="sk-pic">
+      <span class="sk-mark" aria-hidden="true" title="SK"><i class="di"></i><i class="di"></i><i class="di"></i><i class="da"></i><i class="di"></i><i class="da"></i></span>
+      {%- if sk.photo %}
+      <img class="sk-photo" src="{{ '/assets/images/silent-keys/' | append: sk.photo | relative_url }}" alt="{{ sk.name }}" loading="lazy" width="72" height="72" onerror="this.remove()">
+      {%- endif %}
+    </span>
+    <div>
+      <h3>{{ sk.name }}</h3>
+      {%- if sk.call or sk.year %}
+      <div>{% if sk.call %}<span class="sk-call">{{ sk.call }}</span>{% endif %}{% if sk.call and sk.year %}<span class="sk-year">, </span>{% endif %}{% if sk.year %}<span class="sk-year">{{ sk.year }}</span>{% endif %}</div>
+      {%- endif %}
+      {%- if sk.tribute %}
+      <p>{{ sk.tribute }}</p>
+      {%- endif %}
+    </div>
+  </li>
+  {%- endfor %}
+</ul>

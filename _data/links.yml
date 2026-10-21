@@ -1,0 +1,25 @@
+# Useful links, grouped. Add a new group or a new link by copying the pattern.
+- group: Getting your licence
+  links:
+    - title: Essex Hams online training
+      url: https://www.essexham.co.uk/how-to-become-a-ham
+      note: Free online courses for the Foundation, Intermediate and Full exams.
+    - title: RSGB
+      url: https://rsgb.org
+      note: The Radio Society of Great Britain, which runs the licence exams.
+    - title: RSGB shop
+      url: https://www.rsgbshop.org
+      note: Where to buy Foundation Now! and the other exam books.
+    - title: Ofcom
+      url: https://www.ofcom.org.uk
+      note: Issues and manages UK amateur radio licences.
+- group: Repeaters
+  links:
+    - title: GB7RW on ukrepeater.net
+      url: https://ukrepeater.net/my_repeater.php?id=236
+      note: The official listing for our repeater.
+- group: The club elsewhere
+  links:
+    - title: SARS Facebook group
+      url: https://www.facebook.com/groups/g4bp.sars
+      note: Day-to-day news, photos and chat.

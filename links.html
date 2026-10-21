@@ -1,0 +1,16 @@
+---
+layout: default
+title: Useful links
+permalink: /links/
+---
+<div class="prose">
+  <h1>Useful links</h1>
+</div>
+{%- for g in site.data.links %}
+<h2>{{ g.group }}</h2>
+<ul class="link-list">
+  {%- for l in g.links %}
+  <li><a href="{{ l.url }}">{{ l.title }}</a>{% if l.note %}<span>{{ l.note }}</span>{% endif %}</li>
+  {%- endfor %}
+</ul>
+{%- endfor %}

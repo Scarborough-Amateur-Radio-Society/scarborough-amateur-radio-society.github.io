@@ -1,0 +1,19 @@
+{%- comment -%} Pass max=N to show only the first N upcoming events. {%- endcomment -%}
+{%- assign events = site.data.events | sort: "date" -%}
+<div class="events" data-limit="{{ include.max | default: 0 }}">
+  {%- if events and events.size > 0 %}
+  <ol class="event-list">
+    {%- for e in events %}
+    <li class="event" data-date="{{ e.date }}">
+      <time datetime="{{ e.date }}"><span class="ev-day">{{ e.date | date: "%-d" }}</span> <span class="ev-month">{{ e.date | date: "%b %Y" }}</span></time>
+      <div>
+        <h3>{{ e.title }}</h3>
+        <p class="ev-meta">{% if e.time %}{{ e.time }}{% endif %}{% if e.time and e.place %}, {% endif %}{% if e.place %}{{ e.place }}{% endif %}</p>
+        {% if e.details %}<p>{{ e.details }}</p>{% endif %}
+      </div>
+    </li>
+    {%- endfor %}
+  </ol>
+  {%- endif %}
+  <p class="events-empty"{% if events and events.size > 0 %} hidden{% endif %}>No dates are listed at the moment. Club night is on alternate Mondays from 7:30pm, and the Saturday net is on 3.650 MHz from 9 to 10am.</p>
+</div>

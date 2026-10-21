@@ -1,0 +1,40 @@
+---
+layout: default
+title: Home
+description: Scarborough Amateur Radio Society (G4BP) meets on alternate Monday evenings at the Westover Club, Scarborough. Visitors and new members welcome.
+---
+<div class="home-top">
+  <div>
+    <h1>Radio amateurs on the Yorkshire coast since 1922</h1>
+    <p class="lead">We meet on alternate Monday evenings in Scarborough, and visitors are welcome, licensed or not.</p>
+    <p>Come along to a club night to see what amateur radio involves, get help with your licence, or just talk radio. It helps to <a href="{{ '/contact/' | relative_url }}">let our secretary know</a> you're coming, so someone can look out for you.</p>
+  </div>
+
+  <aside aria-label="Club at a glance">
+    <dl class="facts">
+      <dt>Club night</dt>
+      <dd>Alternate Mondays, doors 7:00pm, meeting 7:30pm. <a href="{{ '/events/' | relative_url }}">See dates</a></dd>
+      <dd>Westover Club, 3 Westover Road, Scarborough YO12 5AA</dd>
+      <dd class="small"><a href="https://what3words.com/flows.force.washed">what3words: ///flows.force.washed</a></dd>
+      <dt>Saturday morning net</dt>
+      <dd><span class="freq">3.650 MHz</span>, 9 to 10am</dd>
+      <dt>GB7RW repeater</dt>
+      <dd><span class="freq">145.600 MHz</span></dd>
+      <dd>FM. <a href="{{ '/repeater/' | relative_url }}">Repeater details</a></dd>
+    </dl>
+  </aside>
+</div>
+
+<div class="home-grid">
+  <section>
+    <h2>Getting your licence</h2>
+    <p>The Foundation licence is the first step, and it's well within reach if you spend some time with the <a href="https://www.rsgbshop.org">RSGB book Foundation Now!</a> Exams are taken online, and you get your result as soon as you finish.</p>
+    <p>We no longer run courses ourselves, but <a href="https://www.essexham.co.uk/how-to-become-a-ham">Essex Hams run excellent free online training</a>, and members at the club will help you through it. You can also practise Morse with our <a href="{{ '/morse/' | relative_url }}">own course</a>.</p>
+  </section>
+
+  <section>
+    <h2>Coming up</h2>
+    {% include event-list.html max=3 %}
+    <p><a href="{{ '/events/' | relative_url }}">All events</a></p>
+  </section>
+</div>

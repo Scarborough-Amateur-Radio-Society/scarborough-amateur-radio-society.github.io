@@ -1,0 +1,32 @@
+---
+layout: default
+title: Page not found
+permalink: /404.html
+---
+<div class="prose">
+  <h1>Page not found</h1>
+  <p class="lead">The club has a new website, so old links may have moved.</p>
+  <p>Try the <a href="{{ '/' | relative_url }}">home page</a> or the menu above.</p>
+</div>
+<script>
+  // Send visitors using old-site links to the matching new page.
+  (function () {
+    var map = {
+      "/default.php": "/",
+      "/index.html": "/",
+      "/login.php": "/",
+      "/events.php": "/events/",
+      "/repeater.php": "/repeater/",
+      "/useful_links.php": "/links/",
+      "/training/morse/morse.php": "/morse/#level-1",
+      "/training/morse/morse2.php": "/morse/#level-2",
+      "/training/morse/morse3.php": "/morse/#level-3",
+      "/silent_keys/silent_keys.php": "/silent-keys/",
+      "/contact/contact.php": "/contact/",
+      "/content/legals/privacy_policy.php": "/privacy/",
+      "/content/legals/terms_and_conditions.php": "/privacy/"
+    };
+    var target = map[location.pathname.toLowerCase()];
+    if (target) location.replace(target);
+  })();
+</script>
